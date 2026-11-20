@@ -1,0 +1,1 @@
+const express=require('express');const path=require('path');const app=express();app.use(express.static(__dirname));app.get('/task1',(req,res)=>res.sendFile(path.join(__dirname,'task1.html')));app.get('/task2',(req,res)=>res.sendFile(path.join(__dirname,'task2.html')));app.listen(process.env.PORT||3000,()=>console.log('http://localhost:3000'));
